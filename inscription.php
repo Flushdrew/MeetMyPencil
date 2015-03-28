@@ -75,22 +75,27 @@
 	<div class="container"</div>
 	
 	<div class"row">	
-		<form class="col-md-offset-3 col-md-6" >
+		<form method="post" action="validation_inscription.php" class="col-md-offset-3 col-md-6" >
 			<legend>Inscription :</legend>
 			
 				<div class="form-group">
-					<label for="texte">Pseudo : </label>
-					<input id="text" type="text" class="form-control">
+					<label for="pseudo">Pseudo : </label>
+					<input id="pseudo" placeholder="votre pseudo" type="text" name="pseudo" class="form-control">
 				</div>
 				
 				<div class="form-group">
-					<label for="texte">Mot de passe : </label>
-					<input id="text" type="text" class="form-control">
+					<label for="pass">Mot de passe : </label>
+					<input id="pass" type="password" placeholder="votre mot de passe" name="pass" class="form-control">
 				</div>
 				
 				<div class="form-group">
-					<label for="texte">Adresse e-mail : </label>
-					<input id="text" type="text" class="form-control">
+					<label for="confirmer_pass">Confirmer mot de passe : </label>
+					<input id="confirmer_pass" placeholder="veuillez confirmer le mot de passe" type="password" name="confirmer_pass" class="form-control">
+				</div>
+				
+				<div class="form-group">
+					<label for="email">Adresse email : </label>
+					<input id="email" type="email" placeholder="votre adresse email" name="email" class="form-control">
 				</div>
 				
 				<div class="form-group">
