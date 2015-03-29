@@ -94,8 +94,13 @@
 				</div>
 				
 				<div class="form-group">
-					<label for="email">Adresse email : </label>
-					<input id="email" type="email" placeholder="votre adresse email" name="email" class="form-control">
+					<label for="email_membre">Adresse email : </label>
+					<input id="email_membre" type="email" placeholder="votre adresse email" name="email_membre" class="form-control">
+				</div>
+				
+				<div class="form-group">
+					<label for="confirmation_email_membre">Confirmer l'adresse email : </label>
+					<input id="confirmation_email_membre" type="email" placeholder="veuillez confirmer votre adresse email" name="confirmation_email_membre" class="form-control">
 				</div>
 				
 				<div class="form-group">
@@ -103,7 +108,7 @@
 					<input id="ville" type="text" placeholder="votre ville" name="ville" class="form-control">
 				</div>
 				
-			<button class="pull-right">Envoyer</button>
+			<button class="pull-right btn btn-success">Envoyer</button>
 		</form>
 
 		</div>

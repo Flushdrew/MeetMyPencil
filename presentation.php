@@ -98,14 +98,14 @@
     <header>
 
 	<!--Menu de navigation-->
-     <?php include("menu_navigation.php") ?>
+     <?php include("menu_navigation_presentation.php") ?>
 
  
     </header>
 
     <!-- Caroussel
     ================================================== -->
-	<div class="col-md-offset-2 col-md-8">
+	
 	
 	<div id="carousel" class="carousel slide" data-ride="carousel">
 	<ol class="carousel-indicators">
@@ -130,14 +130,14 @@
   <a class="right carousel-control" href="#carousel" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
-	</div>
+	
 	</div>
 	
 	<div class="container" id="accueil">
 	
 	<!-- 1er bloc
     ================================================== -->
-	<div class="jumbotron">
+	<div class="jumbotron" >
     <h1 class="text-center">Bienvenue sur MeetMyPencil</h1>
 		<div class="row">
 			<div class="col-md-5">
