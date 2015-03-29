@@ -43,18 +43,36 @@
 	
 	<div class="container">
 	<div class="row">
-	<div class="col-md-offset-3 col-md-6">
 	
-	<legend>Vos informations</legend>
+	<?php
+	if (isset($_POST['pseudo']) AND isset($_POST['pass']) AND isset($_POST['confirmer_pass']) AND isset($_POST['email']) AND isset($_POST['ville']) AND ($_POST['pass'] === $_POST['confirmer_pass']) ) 
+		
+	{	
+	?>	
+		<div class="col-md-offset-3 col-md-6">
 	
-	<label>Pseudo : </label> 
-	<?php echo $_POST['pseudo'] ; ?></br>
-	<label>email : </label>
-	<?php echo $_POST['email'] ; ?></br>
+			<legend>Vos informations</legend>
+				<label>Pseudo : </label> 
+					<?php echo $_POST['pseudo'] ; ?></br>
+				<label>email : </label>
+					<?php echo $_POST['email'] ; ?></br>
 	
+		</div>
 	</div>
 	</div>
-	</div>
 	
+	<?php
+	}
+	
+	else 
+		{
+		echo 'il y a une erreur dans le formulaire , veuillez recommencer' ;
+		echo $_POST['pass'] ;
+		echo $_POST['confirmer_pass'] ;
+		}
+	?>
+	
+	</body>
+	</html>
 	
 	

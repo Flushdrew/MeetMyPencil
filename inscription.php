@@ -99,12 +99,8 @@
 				</div>
 				
 				<div class="form-group">
-					<label for="select">Age : </label>
-					<select id="select" class="form-control">
-						<option>Option 1</option>
-						<option>Option 2</option>
-						<option>Option 3</option>
-					</select>
+					<label for="ville">Votre ville : </label>
+					<input id="ville" type="text" placeholder="votre ville" name="ville" class="form-control">
 				</div>
 				
 			<button class="pull-right">Envoyer</button>
