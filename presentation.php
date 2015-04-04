@@ -12,6 +12,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="mmp.css" >
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,78 +21,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style type="text/css"> 
-
-      /* Styles de base */
-	  
-      body {
-        background : url(img/sketch.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-		font-family:'bitter' ,"Times New Roman", Verdana, sans-serif;
-		padding-top: 50px;
-      }
-		
-		img {
-		width : 100% ;
-		margin-bottom : 15px ;
-	   }
-	   
-	   .navbar {
-	   margin-left : -15px ;
-	   margin-right : -15px;
-	   margin-bottom : 0px;
-	   }
-	   
-	   #carousel {
-	   margin-left : -15px ;
-	   margin-right : -15px;
-	   }
-	   
-	   
-	   h1 {
-	   margin-bottom : 35px ;
-	   }
-	   
-	   .jumbotron {
-	   background-color : rgba(255 , 255 , 255 , 0.2) ;
-	   }
-	   
-	   .jumbotron h1 , .jumbotron p{
-	   color :black;
-	   }
-	   
-	   
-	   .navbar {
-	   border-radius : 0px ;
-	   }
-	   
-	   .col-md-6 {
-	   margin-bottom : 15px;
-	   }
-	   
-	   a li {
-	   margin-left : 10px ;
-	   }
-	
-	@media(max-width: 767px ) {
-	li {
-	margin-left : 15px;
-	}
-	#titre_site {
-	margin-left : 15px ;
-	}
-	
-	
-	}
-		
-    </style>
+  
 
   </head>
 
 	<div class="container">
+	<div class="row bloc_accueil">
 	
   <body data-spy="scroll" data-target=".navbar">
 
@@ -222,5 +158,6 @@
 	</script>
 	
   </body>
+  </div>
 </div>
 </html>
