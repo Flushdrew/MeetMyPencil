@@ -31,4 +31,4 @@
 
 	<div class="container-fluid">
 	
-		
+		<?php include("menu_navigation.php") ?>

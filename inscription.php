@@ -56,10 +56,10 @@
 				</ul>
 		<form class="navbar-form navbar-right inline-form">
 			<div class="form-group">
-				<a href"#" class="btn btn-danger">S'inscrire</a>
+				<a href="inscription.php" class="btn btn-danger">S'inscrire</a>
 			</div>
 			<div class="form-group">
-				<a href"#" class="btn btn-danger">Connexion</a>
+				<a href="connexion.php" class="btn btn-danger">Connexion</a>
 			</div>
 		</form>
 				

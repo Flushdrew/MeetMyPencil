@@ -47,19 +47,23 @@
 					<?php
 						if (!empty($_POST['pseudo']) && !empty($_POST['pass']) && !empty($_POST['confirmer_pass']) && !empty($_POST['email_membre']) && !empty($_POST['ville']) && $_POST['pass']==$_POST['confirmer_pass'] && $_POST['email_membre']==$_POST['confirmation_email_membre'] ) 
 							{	
-					?>	
+						
+							
+								try
+								{
+									$bdd = new PDO('mysql:host=localhost;dbname=meetmypencil;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+								}
+								catch(Exception $e)
+								{
+								die('Erreur : '.$e->getMessage());
+								}
+								
+							$req = $bdd->prepare('INSERT INTO membres (pseudo, password, email, ville, date_inscription) VALUES(?, ?, ?, ?,Now())');
+							$req->execute(array($_POST['pseudo'],$_POST['pass'],$_POST['email_membre'],$_POST['ville']));
+							
+								header('Location: index.php');
+								?>
 					
-						<div class="col-md-offset-3 col-md-6">
-	
-							<legend>Vos informations</legend>
-								<label>Pseudo : </label> 
-									<?php echo $_POST['pseudo'] ; ?></br>
-								<label>Email : </label>
-									<?php echo $_POST['email_membre'] ; ?></br>
-								<label>Ville : </label>
-									<?php echo $_POST['ville'] ; ?></br>
-						</div>
-	
 					<?php
 							}
 						else 

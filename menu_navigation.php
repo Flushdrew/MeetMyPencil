@@ -21,7 +21,7 @@
 				<a href="inscription.php" class="btn btn-danger">S'inscrire</a>
 			</div>
 			<div class="form-group">
-				<a href"#" class="btn btn-danger">uploader une photo</a>
+				<a href"#" class="btn btn-danger">Uploader un dessin</a>
 			</div>
 		</form>
 				

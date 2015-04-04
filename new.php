@@ -11,7 +11,7 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,7 +29,7 @@
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
-		font-family:'bitter' ,"Times New Roman", Verdana, sans-serif;
+		font-family:"Times New Roman" Verdana, sans-serif;
 		padding-top: 50px;
       }
 		
@@ -37,6 +37,7 @@
 		width : 100% ;
 		margin-bottom : 15px ;
 	   }
+	   
 	   
 	   .navbar {
 	   margin-left : -15px ;
@@ -55,12 +56,13 @@
 	   }
 	   
 	   .jumbotron {
-	   background-color : rgba(255 , 255 , 255 , 0.2) ;
+	   background-color : rgba(255, 114 , 90 , 1) ;
 	   }
 	   
-	   .jumbotron h1 , .jumbotron p{
-	   color :black;
+	   h1.jumbotron , p.jumbotron {
+	   text-color :white ;
 	   }
+	   
 	   
 	   
 	   .navbar {
@@ -90,7 +92,7 @@
 
   </head>
 
-	<div class="container">
+	<div class="container-fluid">
 	
   <body data-spy="scroll" data-target=".navbar">
 
@@ -103,35 +105,7 @@
  
     </header>
 
-    <!-- Caroussel
-    ================================================== -->
-	
-	
-	<div id="carousel" class="carousel slide" data-ride="carousel">
-	<ol class="carousel-indicators">
-    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
-	<li data-target="#carousel" data-slide-to="3"></li>
-  </ol>
-	<div class="carousel-inner">
-    <div class="item active"><img src="img/dessinenmusiquegrand.jpg" alt="bd">
-		<h1 class="carousel-caption">Un design époustouflant</h1></div>
-    <div class="item"><img src="img/pochettecrayongrand.jpg" alt="Architecture">
-		<h1 class="carousel-caption">Une structure incroyable</h1></div>
-    <div class="item"><img src="img/dessinpontgrand.jpg" alt="Architecture">
-		<h1 class="carousel-caption">Un architecture hors norme</h1></div>
-	<div class="item"><img src="img/magasincrayongrand.jpg" alt="Architecture">
-		<h1 class="carousel-caption">Des résultats magnifiques</h1></div>
-    </div>
-	<a class="left carousel-control" href="#carousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-	
-	</div>
+   
 	
 	<div class="container" id="accueil">
 	
@@ -139,11 +113,11 @@
     ================================================== -->
 	<div class="jumbotron" >
     <h1 class="text-center">Bienvenue sur MeetMyPencil</h1>
-		<div class="row">
-			<div class="col-md-5">
+		<div class="row" class="accueil">
+			<div class="col-md-6">
 				<img src="img/personnage.jpg" alt="Accueil" class="img-thumbnail">
 			</div>    
-			<div class="col-md-7">
+			<div class="col-md-6">
 				<p> Venez partager avec nous vos créations du jour ou tout simplement 
 				parcourir celle des membres.Venez apprivoiser des
 				techniques de dessins et le matériel adéquat !</p>
@@ -156,12 +130,12 @@
 	<div class="jumbotron" id="qui">
     <h1 class="text-center">Ne travaillez plus seul </h1>
 		<div class="row">
-			<div class="col-md-7">
+			<div class="col-md-6">
 				<p>Vous recherchez un scénariste ou un dessinateur ? Venez partager vos projets ici !</br>
 					Vous pouvez protéger certaines de vos créations et ne les partager qu'avec les personnes avec qui vous souhaitez travailler.
 					</p>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-6">
 				<img class="img-thumbnail" class="pull-right"  src="img/bd.jpg" alt="Equipe" >            
 			</div>
 		</div>
