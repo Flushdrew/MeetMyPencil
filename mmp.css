@@ -1,13 +1,13 @@
 		body {
-        background-color : grey ;
+        background-color : grey;
 		font-family:'bitter' ,"Times New Roman", Verdana, sans-serif;
 		padding-top: 50px;
       }
 		
-	 img {
+	 /*img {
 		width : 100% ;
 		margin-bottom : 15px ;
-	   }
+	   }*/
 	   
 	   .navbar {
 	   margin-left : -15px ;

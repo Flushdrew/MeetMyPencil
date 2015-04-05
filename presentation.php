@@ -51,13 +51,13 @@
 	<li data-target="#carousel" data-slide-to="3"></li>
   </ol>
 	<div class="carousel-inner">
-    <div class="item active"><img src="img/dessinenmusiquegrand.jpg" alt="bd">
+    <div class="item active"><img src="img/dessinenmusiquegrand2.jpg" alt="bd">
 		<h1 class="carousel-caption">Un design époustouflant</h1></div>
-    <div class="item"><img src="img/pochettecrayongrand.jpg" alt="Architecture">
+    <div class="item"><img src="img/pochettecrayongrand2.jpg" alt="Architecture">
 		<h1 class="carousel-caption">Une structure incroyable</h1></div>
-    <div class="item"><img src="img/dessinpontgrand.jpg" alt="Architecture">
+    <div class="item"><img src="img/dessinpontgrand3.jpg" alt="Architecture">
 		<h1 class="carousel-caption">Un architecture hors norme</h1></div>
-	<div class="item"><img src="img/magasincrayongrand.jpg" alt="Architecture">
+	<div class="item"><img src="img/sketch2.jpg" alt="Architecture">
 		<h1 class="carousel-caption">Des résultats magnifiques</h1></div>
     </div>
 	<a class="left carousel-control" href="#carousel" data-slide="prev">
@@ -81,7 +81,7 @@
 			</div>    
 			<div class="col-md-7">
 				<p> Venez partager avec nous vos créations du jour ou tout simplement 
-				parcourir celle des membres.Venez apprivoiser des
+				parcourir celle des membres.</br>Venez apprivoiser des
 				techniques de dessins et le matériel adéquat !</p>
 			</div>
 		</div>	
@@ -99,6 +99,22 @@
 			</div>
 			<div class="col-md-5">
 				<img class="img-thumbnail" class="pull-right"  src="img/bd.jpg" alt="Equipe" >            
+			</div>
+		</div>
+	</div>		
+	
+	<!-- 3eme bloc
+    ================================================== -->
+	<div class="jumbotron" id="inspiration">
+    <h1 class="text-center">Un manque d'inspiration ? </h1>
+		<div class="row">
+		<div class="col-md-5">
+				<img class="img-thumbnail" class="pull-right"  src="img/pasdidee.jpg" alt="idee" >            
+			</div>
+			<div class="col-md-7">
+				<p>Venez chercher des idées de dessin en parcourant les profils de nos membres</br>
+					Vous pouvez également parcourir nos themes ou rechercher ceux qui vous interessent.
+					</p>
 			</div>
 		</div>
 	</div>		
