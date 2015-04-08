@@ -12,16 +12,19 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#accueil">Accueil</a></li>
+					<li><a href="#accueil">accueil</a></li>
 					<li><a href="#qui">	Partagez vos dessins</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 		<form class="navbar-form navbar-right inline-form">
 			<div class="form-group">
-				<a href="inscription.php" class="btn btn-danger">S'inscrire</a>
+				<a href="profil.php" class="btn btn-danger">Mon profil <i class="fa fa-user"></i></a>
 			</div>
 			<div class="form-group">
-				<a href"#" class="btn btn-danger">Uploader un dessin</a>
+				<a href"#" class="btn btn-danger">Uploader un dessin <i class="fa fa-upload"></i></a>
+			</div>
+			<div class="form-group">
+				<a href"#" class="btn btn-danger"><i class="fa fa-power-off"></i></a>
 			</div>
 		</form>
 				

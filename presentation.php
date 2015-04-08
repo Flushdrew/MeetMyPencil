@@ -52,13 +52,13 @@
   </ol>
 	<div class="carousel-inner">
     <div class="item active"><img src="img/dessinenmusiquegrand2.jpg" alt="bd">
-		<h1 class="carousel-caption">Un design époustouflant</h1></div>
+		<h1 class="carousel-caption">Partagez votre passion...</h1></div>
     <div class="item"><img src="img/pochettecrayongrand2.jpg" alt="Architecture">
-		<h1 class="carousel-caption">Une structure incroyable</h1></div>
+		<h1 class="carousel-caption">...votre matériel...</h1></div>
     <div class="item"><img src="img/dessinpontgrand3.jpg" alt="Architecture">
-		<h1 class="carousel-caption">Un architecture hors norme</h1></div>
+		<h1 class="carousel-caption">...vos réalisations...</h1></div>
 	<div class="item"><img src="img/sketch2.jpg" alt="Architecture">
-		<h1 class="carousel-caption">Des résultats magnifiques</h1></div>
+		<h1 class="carousel-caption">...et meme vos croquis !</h1></div>
     </div>
 	<a class="left carousel-control" href="#carousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -76,10 +76,10 @@
 	<div class="jumbotron" >
     <h1 class="text-center">Bienvenue sur MeetMyPencil</h1>
 		<div class="row">
-			<div class="col-md-5">
+			<div class="col-md-6">
 				<img src="img/personnage.jpg" alt="Accueil" class="img-thumbnail">
 			</div>    
-			<div class="col-md-7">
+			<div class="col-md-6">
 				<p> Venez partager avec nous vos créations du jour ou tout simplement 
 				parcourir celle des membres.</br>Venez apprivoiser des
 				techniques de dessins et le matériel adéquat !</p>
@@ -92,12 +92,12 @@
 	<div class="jumbotron" id="qui">
     <h1 class="text-center">Ne travaillez plus seul </h1>
 		<div class="row">
-			<div class="col-md-7">
+			<div class="col-md-6">
 				<p>Vous recherchez un scénariste ou un dessinateur ? Venez partager vos projets ici !</br>
 					Vous pouvez protéger certaines de vos créations et ne les partager qu'avec les personnes avec qui vous souhaitez travailler.
 					</p>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-6">
 				<img class="img-thumbnail" class="pull-right"  src="img/bd.jpg" alt="Equipe" >            
 			</div>
 		</div>
@@ -108,11 +108,11 @@
 	<div class="jumbotron" id="inspiration">
     <h1 class="text-center">Un manque d'inspiration ? </h1>
 		<div class="row">
-		<div class="col-md-5">
+		<div class="col-md-6">
 				<img class="img-thumbnail" class="pull-right"  src="img/pasdidee.jpg" alt="idee" >            
 			</div>
-			<div class="col-md-7">
-				<p>Venez chercher des idées de dessin en parcourant les profils de nos membres</br>
+			<div class="col-md-6">
+				<p>Venez chercher des idées de dessin en parcourant les profils de nos membres.</br>
 					Vous pouvez également parcourir nos themes ou rechercher ceux qui vous interessent.
 					</p>
 			</div>
@@ -135,7 +135,7 @@
 				</div>
 				<div class"row">
 				<div class="col-md-12">
-				<button class="pull-right" type="submit">Envoyer</button>
+				<button class="pull-right btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign"> Envoyer</button>
 				</div>
 				</div>
 				</form>
@@ -144,16 +144,8 @@
 		</div>	
 	</div>	
 
-		<div class"row">
-    <footer class="col-md-offset-3 col-md-6 text-center" >
-      <a class="btn btn-default" href="#"><i class="fa fa-twitter fa-2x"></i></a>
-      <a class="btn btn-default" href="#"><i class="fa fa-facebook fa-2x"></i></a>
-      <a class="btn btn-default" href="#"><i class="fa fa-google-plus fa-2x"></i></a>
-      <a class="btn btn-default" href="#"><i class="fa fa-flickr fa-2x"></i></a>
-      <a class="btn btn-default" href="#"><i class="fa fa-spotify fa-2x"></i></a>
-    </footer>
-		</div>
-
+	
+		
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- Javascript de Bootstrap -->
@@ -176,4 +168,20 @@
   </body>
   </div>
 </div>
+
+<footer class="container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-3">
+			<p>MeetMyPencil 2015</p>
+			</div>		
+			<div class="col-md-offset-2 col-md-3 text-center" >
+				<a class="btn btn-default" href="#"><i class="fa fa-twitter "></i></a>
+				<a class="btn btn-default" href="#"><i class="fa fa-facebook fa-2x"></i></a>
+				<a class="btn btn-default" href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+				<a class="btn btn-default" href="#"><i class="fa fa-flickr fa-2x"></i></a>
+			</div>
+		</div>
+	</div>	
+</footer>
 </html>

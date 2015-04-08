@@ -45,19 +45,50 @@
 				<div class="row">
 	
 					<?php
-						if (!empty($_POST['pseudo']) && !empty($_POST['pass']) && !empty($_POST['confirmer_pass']) && !empty($_POST['email_membre']) && !empty($_POST['ville']) && $_POST['pass']==$_POST['confirmer_pass'] && $_POST['email_membre']==$_POST['confirmation_email_membre'] ) 
-							{	
-						
+					try
+						{
+							$bdd = new PDO('mysql:host=localhost;dbname=meetmypencil;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+						}
+							catch(Exception $e)
+						{
+							die('Erreur : '.$e->getMessage());
+						}
+					
+							 $_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
+							 $_POST['pass'] = htmlspecialchars($_POST['pass']);
+							 $_POST['confirmer_pass'] = htmlspecialchars($_POST['confirmer_pass']);
+							 $_POST['email_membre'] = htmlspecialchars($_POST['email_membre']);
+							 $_POST['ville'] = htmlspecialchars($_POST['ville']);
+							 $pass_hache = sha1($_POST['pass']);
+					
+							$erreur = '';
+					
+						if (!empty($_POST['pseudo']) && !empty($_POST['pass']) && !empty($_POST['confirmer_pass']) && !empty($_POST['email_membre']) && !empty($_POST['ville']) &&  $_POST['email_membre']==$_POST['confirmation_email_membre'] ) 
+							 
+							 {
 							
-								try
-								{
-									$bdd = new PDO('mysql:host=localhost;dbname=meetmypencil;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-								}
-								catch(Exception $e)
-								{
-								die('Erreur : '.$e->getMessage());
-								}
-								
+								if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email_membre']))
+									{
+									}
+									else
+									{
+									$erreur = 'Email non valide </br>';
+									}
+								if ($_POST['pass'] == $_POST['confirmer_pass'])
+									{
+									}
+									else
+									{
+									$erreur = $erreur .'Les mots de passe saisies ne sont pas identiques.</br>' ;
+									}
+								if ($_POST['email_membre'] == $_POST['confirmation_email_membre'])
+									{
+									}
+									else
+									{
+									$erreur = $erreur .'Les adresses emails saisies ne sont pas identiques.</br>' ;
+									}
+							
 							$req = $bdd->prepare('INSERT INTO membres (pseudo, password, email, ville, date_inscription) VALUES(?, ?, ?, ?,Now())');
 							$req->execute(array($_POST['pseudo'],$_POST['pass'],$_POST['email_membre'],$_POST['ville']));
 							
@@ -68,13 +99,14 @@
 							}
 						else 
 							{
+							
 					?>	
-													
+						 					
 							<div class="container">
 	
 								<div class"row">	
 									<div class="alert alert-danger text-center col-md-offset-3 col-md-6">
-										<strong>Le formulaire n'est pas valide , veuillez recommencer.</strong>	
+										<strong><?php echo $erreur ;?>.</strong>	
 									</div>
 								</div>
 		

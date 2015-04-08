@@ -49,6 +49,12 @@
 	   a li {
 	   margin-left : 10px ;
 	   }
+	   
+	   footer {
+	   background-color : #222 ;
+	   border-color:#080808 ;
+	   padding-top : 15px ;
+	   }
 	
 	@media(max-width: 767px ) {
 	li {
@@ -62,5 +68,10 @@
 	.bloc_accueil {
 	background-color : white ;
 	padding : 15px ;
-	margin-bottom : 15px ;
 	}
+	
+	.btn-default {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}

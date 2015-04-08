@@ -21,12 +21,15 @@
 	
 	</head>
 
-	<div class="container-fluid">
-	
-		<body data-spy="scroll" data-target=".navbar">
+		<body class="container">
+			<div class="col-md-4">
+			<p>image de profil</p>
+			
+			<div class="col-md-offset-1 col-md-6>
+			
+			
   
   
   
 		</body>
-	</div>
 </html>
