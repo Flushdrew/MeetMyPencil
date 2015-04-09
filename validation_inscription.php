@@ -54,98 +54,71 @@
 							die('Erreur : '.$e->getMessage());
 						}
 					
-							 $_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
+							 /*$_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
 							 $_POST['pass'] = htmlspecialchars($_POST['pass']);
 							 $_POST['confirmer_pass'] = htmlspecialchars($_POST['confirmer_pass']);
 							 $_POST['email_membre'] = htmlspecialchars($_POST['email_membre']);
 							 $_POST['ville'] = htmlspecialchars($_POST['ville']);
-							 $pass_hache = sha1($_POST['pass']);
+							 $pass_hache = sha1($_POST['pass']);*/
 					
-							$erreur = '';
+							
+							if(isset($_POST['bouton_inscription'])) //Si le formulaire a été soumis
+							{ 
+							$errors = [];
 					
-						if (!empty($_POST['pseudo']) && !empty($_POST['pass']) && !empty($_POST['confirmer_pass']) && !empty($_POST['email_membre']) && !empty($_POST['ville']) &&  $_POST['email_membre']==$_POST['confirmation_email_membre'] ) 
+							if (!empty($_POST['pseudo']) && !empty($_POST['pass']) && !empty($_POST['confirmer_pass']) && !empty($_POST['email_membre']) && !empty($_POST['ville'])) 
 							 
-							 {
+								{
+							 /*
+								* vérification pseudo
+									*/
+								if( strlen($_POST['pseudo']) < 5 ){
+								$errors[] = '5 caractères minimums pour le pseudo !';
+								}
+ 
+								/*
+								* vérification des deux mot de passe
+								*/
+								if ($_POST['pass'] != $_POST['confirmer_pass']) {
+								$errors[] = 'les deux mot de passe sont différents !';
+								}
+ 
+								/*
+								* Tu fais pareil pour tous les vérifications email, mot de passe...
+								*/
+ 
+								}else {
+								$errors[] = 'veuillez remplir tous les champs';
+								}
 							
-								if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email_membre']))
-									{
-									}
-									else
-									{
-									$erreur = 'Email non valide </br>';
-									}
-								if ($_POST['pass'] == $_POST['confirmer_pass'])
-									{
-									}
-									else
-									{
-									$erreur = $erreur .'Les mots de passe saisies ne sont pas identiques.</br>' ;
-									}
-								if ($_POST['email_membre'] == $_POST['confirmation_email_membre'])
-									{
-									}
-									else
-									{
-									$erreur = $erreur .'Les adresses emails saisies ne sont pas identiques.</br>' ;
-									}
-							
+							if (count($errors) > 0){ // S'il y a des erreurs on les affiches
+								foreach ($errors as $error) 
+								{
+								?>
+								<div class="container">
+									<div class="alert alert-danger text-center col-md-offset-3 col-md-6">
+										<strong><?php echo '<p>' .$error. '</br></p>';?></strong>	
+									</div>
+								</div>
+									
+								<?php	
+								}include("inc_formulaire_inscription.php") ;
+								}else{ //Sinon c'est parfait ; )
+								$_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
+								$_POST['pass'] = htmlspecialchars($_POST['pass']);
+								$_POST['confirmer_pass'] = htmlspecialchars($_POST['confirmer_pass']);
+								$_POST['email_membre'] = htmlspecialchars($_POST['email_membre']);
+								$_POST['ville'] = htmlspecialchars($_POST['ville']);
+								$_POST['pass'] = sha1($_POST['pass']);
+ 
+							 
 							$req = $bdd->prepare('INSERT INTO membres (pseudo, password, email, ville, date_inscription) VALUES(?, ?, ?, ?,Now())');
 							$req->execute(array($_POST['pseudo'],$_POST['pass'],$_POST['email_membre'],$_POST['ville']));
 							
 								header('Location: index.php');
+								}
+								}
 								?>
-					
-					<?php
-							}
-						else 
-							{
-							
-					?>	
-						 					
-							<div class="container">
-	
-								<div class"row">	
-									<div class="alert alert-danger text-center col-md-offset-3 col-md-6">
-										<strong><?php echo $erreur ;?>.</strong>	
-									</div>
-								</div>
-		
-								<div class="row">		
-						
-									<form method="post" action="validation_inscription.php" class="col-md-offset-3 col-md-6 ">
-			
-										<legend>Inscription :</legend>
-			
-											<div class="form-group">
-												<label for="pseudo">Pseudo : </label>
-													<input id="pseudo" placeholder="votre pseudo" type="text" name="pseudo" class="form-control">
-											</div>	
-											<div class="form-group">
-												<label for="pass">Mot de passe : </label>
-													<input id="pass" type="password" placeholder="votre mot de passe" name="pass" class="form-control">
-											</div>
-											<div class="form-group">
-												<label for="confirmer_pass">Confirmer mot de passe : </label>
-													<input id="confirmer_pass" placeholder="veuillez confirmer le mot de passe" type="password" name="confirmer_pass" class="form-control">
-											</div>
-											<div class="form-group">
-												<label for="email_membre">Adresse email : </label>
-													<input id="email_membre" type="email" placeholder="votre adresse email" name="email_membre" class="form-control">
-											</div>
-											<div class="form-group">
-												<label for="ville">Votre ville : </label>
-													<input id="ville" type="text" placeholder="votre ville" name="ville" class="form-control">
-											</div>
-											<button class="pull-right btn btn-success">Envoyer</button>
-					
-									</form>
-								</div>	
-							</div>
-	
-					<?php 
-						}
-					?>
-	
 		</body>
 	</div>
 </html>

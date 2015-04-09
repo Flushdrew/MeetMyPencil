@@ -80,7 +80,7 @@
 			
 				<div class="form-group">
 					<label for="pseudo">Pseudo : </label>
-					<input id="pseudo" placeholder="votre pseudo" type="text" name="pseudo" class="form-control">
+					<input id="pseudo" placeholder="votre pseudo , 5 caracteres minimums" type="text" name="pseudo" class="form-control">
 				</div>
 				
 				<div class="form-group">
@@ -108,7 +108,7 @@
 					<input id="ville" type="text" placeholder="votre ville" name="ville" class="form-control">
 				</div>
 				
-			<button class="pull-right btn btn-success">Envoyer</button>
+			<button class="pull-right btn btn-success" id="bouton_inscription" name="bouton_inscription">Envoyer</button>
 		</form>
 
 		</div>
