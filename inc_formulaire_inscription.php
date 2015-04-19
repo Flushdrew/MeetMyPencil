@@ -34,7 +34,7 @@
 					<input id="ville" type="text" placeholder="votre ville" name="ville" class="form-control">
 				</div>
 				
-			<button class="pull-right btn btn-success" id="bouton_inscription" name="bouton_inscription">Envoyer</button>
+			<button class="pull-right btn btn-danger" id="bouton_inscription" name="bouton_inscription">Envoyer</button>
 		</form>
 
 		</div>

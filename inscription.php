@@ -11,7 +11,7 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -74,7 +74,7 @@
 	
 	<div class="container"</div>
 	
-	<div class"row">	
+	<div class="row">	
 		<form method="post" action="validation_inscription.php" class="col-md-offset-3 col-md-6" >
 			<legend>Inscription :</legend>
 			
@@ -108,7 +108,7 @@
 					<input id="ville" type="text" placeholder="votre ville" name="ville" class="form-control">
 				</div>
 				
-			<button class="pull-right btn btn-success" id="bouton_inscription" name="bouton_inscription">Envoyer</button>
+			<button class="pull-right btn btn-danger" id="bouton_inscription" name="bouton_inscription">Envoyer</button>
 		</form>
 
 		</div>

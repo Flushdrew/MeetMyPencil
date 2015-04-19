@@ -18,13 +18,13 @@
 				</ul>
 		<form class="navbar-form navbar-right inline-form">
 			<div class="form-group">
-				<a href="profil.php" class="btn btn-danger">Mon profil <i class="fa fa-user"></i></a>
+				<a href="profil.php" class="btn btn-danger"><i class="fa fa-user"> <?php echo $_SESSION['pseudo']?></i></a>
 			</div>
 			<div class="form-group">
-				<a href"#" class="btn btn-danger">Uploader un dessin <i class="fa fa-upload"></i></a>
+				<a href="upload_dessin.php" class="btn btn-danger"><i class="fa fa-upload"></i> Uploader un dessin</a>
 			</div>
 			<div class="form-group">
-				<a href"#" class="btn btn-danger"><i class="fa fa-power-off"></i></a>
+				<a href="deconnexion.php" class="btn btn-danger"><i class="fa fa-power-off"></i></a>
 			</div>
 		</form>
 				

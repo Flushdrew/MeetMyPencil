@@ -55,6 +55,10 @@
 	   border-color:#080808 ;
 	   padding-top : 15px ;
 	   }
+	   
+	   .profil {
+	   padding: 15px;
+	   }
 	
 	@media(max-width: 767px ) {
 	li {
@@ -63,6 +67,10 @@
 	#titre_site {
 	margin-left : 15px ;
 	}
+	}
+	
+	.profil {
+	background-color : white ;
 	}
 	
 	.bloc_accueil {

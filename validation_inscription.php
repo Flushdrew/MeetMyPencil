@@ -54,14 +54,6 @@
 							die('Erreur : '.$e->getMessage());
 						}
 					
-							 /*$_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
-							 $_POST['pass'] = htmlspecialchars($_POST['pass']);
-							 $_POST['confirmer_pass'] = htmlspecialchars($_POST['confirmer_pass']);
-							 $_POST['email_membre'] = htmlspecialchars($_POST['email_membre']);
-							 $_POST['ville'] = htmlspecialchars($_POST['ville']);
-							 $pass_hache = sha1($_POST['pass']);*/
-					
-							
 							if(isset($_POST['bouton_inscription'])) //Si le formulaire a été soumis
 							{ 
 							$errors = [];
@@ -80,7 +72,7 @@
 								* vérification des deux mot de passe
 								*/
 								if ($_POST['pass'] != $_POST['confirmer_pass']) {
-								$errors[] = 'les deux mot de passe sont différents !';
+								$errors[] = 'Les deux mot de passe sont différents !';
 								}
  
 								/*
@@ -90,8 +82,44 @@
 								}else {
 								$errors[] = 'veuillez remplir tous les champs';
 								}
+								
+								/*
+								* vérification si le pseudo est disponible
+								*/
+								
+								$pseudo_Exist = $bdd->prepare("SELECT pseudo FROM membres WHERE pseudo = :pseudo");
+								//On recupère les pseudos de la base ou les pseudos sont egaaux au pseudo passé par le formulaire
+								$pseudo_Exist->bindValue('pseudo', $_POST['pseudo'], PDO::PARAM_STR);
+								$pseudo_Exist->execute();
+								//on exécute la requête
+								$pseudoINbdd = $pseudo_Exist->rowCount();
+								//Rowcount permet de sortir le nombre de valeur que ta requête renvoi, que l'on rentre dans la variable pseudoINbdd (ou autre )
+								if($pseudoINbdd == 1)
+								//Si la requête renvoi 0, le pseudo n'existe pas dans la base, sinon le pseudo existe.
+								{
+								$errors[] = 'Ce pseudo est déja pris' ;
+								}
+								$pseudo_Exist->closeCursor();
+								
+								/*
+								* vérification si l'adresse email est déja utilisée
+								*/
+								
+								$email_Exist = $bdd->prepare("SELECT email FROM membres WHERE email = :email_membre");
+								//On recupère les emails de la base ou les emails sont egales à l'email passée par le formulaire
+								$email_Exist->bindValue('email_membre', $_POST['email_membre'], PDO::PARAM_STR);
+								$email_Exist->execute();
+								//on exécute la requête
+								$emailINbdd = $email_Exist->rowCount();
+								//Rowcount permet de sortir le nombre de valeur que ta requête renvoi, que l'on rentre dans la variable pseudoINbdd (ou autre )
+								if($emailINbdd == 1)
+								//Si la requête renvoi 0, l'email n'existe pas dans la base, sinon l'email existe.
+								{
+								$errors[] = 'Cette email est déja utilisée' ;
+								}
+								$email_Exist->closeCursor();
 							
-							if (count($errors) > 0){ // S'il y a des erreurs on les affiches
+							if (count($errors) > 0){ // S'il y a des erreurs on les affiche
 								foreach ($errors as $error) 
 								{
 								?>
@@ -115,6 +143,7 @@
 							$req = $bdd->prepare('INSERT INTO membres (pseudo, password, email, ville, date_inscription) VALUES(?, ?, ?, ?,Now())');
 							$req->execute(array($_POST['pseudo'],$_POST['pass'],$_POST['email_membre'],$_POST['ville']));
 							
+							$req->closeCursor();
 								header('Location: index.php');
 								}
 								}

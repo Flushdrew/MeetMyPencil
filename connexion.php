@@ -31,10 +31,10 @@
 
 	<?php include("menu_navigation_presentation.php") ?>
 	
-		<div class="container"</div>
+<div class="container"</div>
 	
 	<div class"row">	
-		<form method="post" action="validation_inscription.php" class="col-md-offset-3 col-md-6" >
+		<form method="post" action="validation_connexion.php" class="col-md-offset-3 col-md-6" >
 			<legend>Connexion :</legend>
 			
 				<div class="form-group">
@@ -46,9 +46,9 @@
 					<label for="pass">Mot de passe : </label>
 					<input id="pass" type="password" placeholder="votre mot de passe" name="pass" class="form-control">
 				</div>
-				<button class="pull-right btn btn-success">Se connecter</button>
+				<button class="pull-right btn btn-danger">Se connecter</button>
 		</form>	
   
-		</body>
 	</div>
+</div>
 </html>
